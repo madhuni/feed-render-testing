@@ -72,20 +72,13 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
           it('Menu item changing visibility', function() {
-            var menuIcon = $('.menu-icon-link');
-            var clickCount = 0;
-            var bodyClass = $('body').attr('class');
-            menuIcon.on('click', function() {
-                clickCount++;
-            });
+            $('.menu-icon-link').trigger('click');
+            expect($('body').hasClass('menu-hidden')).toBeFalsy();
 
-            if (clickCount % 2 === 0) {
-                expect(bodyClass).toBe("menu-hidden");
-            } else {
-                expect(bodyClass).toBe("");
-            }
+            $('.menu-icon-link').trigger('click');
+            expect($('body').hasClass('menu-hidden')).toBeTruthy();
           });
-
+            
     });
 
     /* TODO: Write a new test suite named "Initial Entries" */
