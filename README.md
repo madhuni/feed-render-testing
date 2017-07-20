@@ -2,6 +2,8 @@
 
 For this project, a web-based application that reads RSS feeds is provided. I have written the test suites for this application by using [Jasmine](http://jasmine.github.io/) framework.
 
+This project "Feed Render Testing" is part of Front-end Web Developer Nanodegree by Udacity.
+
 ## Getting Started
 
 ### Installing
